@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea9d53d6-7d74-4f3e-814c-cbf44c7963f5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/agadedujour/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/agadedujour/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,8 +25,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/agadedujour/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="135" column="8" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="8" />
+            <state relative-caret-position="169">
+              <caret line="25" selection-start-line="25" selection-end-line="25" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -69,6 +69,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>stat</find>
+      <find>deb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -89,7 +90,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="675" />
     <option name="y" value="95" />
     <option name="width" value="1630" />
@@ -178,7 +179,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
+    <frame x="-6" y="-6" width="1293" height="693" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12490242" />
@@ -444,8 +445,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/agadedujour/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="135" column="8" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="8" />
+        <state relative-caret-position="169">
+          <caret line="25" selection-start-line="25" selection-end-line="25" selection-end-column="12" />
         </state>
       </provider>
     </entry>
