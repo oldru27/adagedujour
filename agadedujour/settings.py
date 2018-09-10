@@ -131,6 +131,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/cool/' #pas besoin d'avoir une url de media qui est la meme que la root
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
