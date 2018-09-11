@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+{% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -19,20 +20,20 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">Adagedujour</a>
+          <a class="navbar-brand" href="{% url 'maison' %}">Adagedujour</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Blog</a>
+                <a class="nav-link" href="{% url 'listblog' %}">Blog</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">IA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% static 'resume.pdf' %}">Resume</a>
               </li>
             </ul>
           </div>
@@ -45,7 +46,7 @@
       <h2>Les derniers posts</h2>
       <br>
       <br>
-      <a href="{% url 'detailblog' %}"><h3>{{ blog.titre}} </h3></a>
+      <a href="{% url 'detailblog' blog.id %}"><h3>{{ blog.titre}} </h3></a>
       <img class="img-fluid" src="{{ blog.image.url}}"></img>
       <p>{{ blog.adjust}}</p>
       {% endfor %}
