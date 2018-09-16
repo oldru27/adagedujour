@@ -132,11 +132,11 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATIC_URL = '/staticlol/'
+STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-MEDIA_URL = '/cool/' #pas besoin d'avoir une url de media qui est la meme que la root
+MEDIA_URL = '/media/' #pas besoin d'avoir une url de media qui est la meme que la root
 
 try:
     from .local_settings import *
