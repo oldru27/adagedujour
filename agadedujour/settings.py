@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'jobs.apps.JobsConfig', #dossier job>apps> class JobsConfig,
     'blog.apps.BlogConfig', #dossier job>apps> class JobsConfig,
+    'account.apps.AccountConfig',
 ]
 
 MIDDLEWARE = [
