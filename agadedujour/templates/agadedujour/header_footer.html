@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog Home - Start Bootstrap Template</title>
+    <title>Adagedujour</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -30,68 +30,35 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'listblog' %}">Blog</a>
+                <a class="nav-link" href="{% url 'maison' %}">Blog</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">IA</a>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              {% if user.is_authenticated %}
+              <li class="nav-item ml-auto">
+                <a class="nav-link" href="javascript:{document.getElementById('formulaire').submit()}">Logout</a>
+                <form id="formulaire" method="POST" action="{% url 'deconnection' %}">
+                  {% csrf_token %}
+                  <input type="hidden"/>
+                </form>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% static 'resume.pdf' %}">Resume</a>
+
+              {% else %}
+              <li class="nav-item ml-auto">
+                <a class="nav-link" href="{% url 'connection' %}">Sign-in</a>
               </li>
-              <li class="nav-item pull-right">
-                <a class="nav-link" href="">Sign-in</a>
+              <li class="nav-item ml-auto">
+                <a class="nav-link" href="{% url 'creation' %}">Sign-up</a>
               </li>
-              <li class="nav-item pull-right">
-                <a class="nav-link" href="">Sign-up</a>
-              </li>
+              {% endif %}
             </ul>
           </div>
         </nav>
     </header>
 
-    <!-- Page Content -->
-    <div class="container">
+{% block content %}
 
-      <div class="row">
-
-        <!-- Blog Entries Column -->
-        <div class="col-md-8">
-
-          <h1 class="my-4">Les adageurs
-            <small>Sarajevo - Istanbul</small>
-          </h1>
-
-          <!-- Blog Post -->
-            {% for job in jobs.all %}
-          <div class="card mb-4">
-            <img class="card-img-top" src="{{ job.imagefun.url }}" alt="Card image cap">
-            <div class="card-body">
-              <h2 class="card-title">{{ job.titre }}</h2>
-              <p class="card-text">{{ job.summary }}</p>
-              <a href="#" class="btn btn-primary">Read More &rarr;</a>
-            </div>
-            <div class="card-footer text-muted">
-              Posté le {{ job.date }}
-            </div>
-          </div>
-            {% endfor %}
-
-          <!-- Pagination -->
-          <ul class="pagination justify-content-center mb-4">
-            <li class="page-item">
-              <a class="page-link" href="#">&larr; Older</a>
-            </li>
-            <li class="page-item disabled">
-              <a class="page-link" href="#">Newer &rarr;</a>
-            </li>
-          </ul>
-
-        </div>
-      </div>
-      <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
+{% endblock %}
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
