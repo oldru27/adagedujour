@@ -6,6 +6,7 @@ from django.contrib import auth
 
 def creercompte(request):
     if request.method == 'POST':
+        print('yopost')
         if request.POST['password'] == request.POST['confirmpassword']:
             try:
                 user = User.objects.get(username = request.POST['username'])
@@ -17,6 +18,7 @@ def creercompte(request):
         else:         #faire le signup
             return render(request, 'account/signup.html', {'iferrors': 'Mettre deux password identique'})
     else:  # faire le signup
+        print('yoget')
         return render(request, 'account/signup.html')
 
 
